@@ -11,7 +11,15 @@ body h1{
 	text-align: center;
 }
 
-.score{
+div img{
+	position: absolute;
+    height: 100px;
+    width: 70px;
+    display: inline-block;
+    bottom: 0;
+}
 
-	
+#score{
+
+
 }

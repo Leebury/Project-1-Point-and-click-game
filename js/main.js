@@ -9,7 +9,7 @@ var $target = $('.target');
 var score = 0;
 
 //Change to target when needed
-	$main.on('click', function(event){
+	$target.on('click', function(event){
 		console.log('Body click');
 		incrementScore();
 	});
