@@ -5,14 +5,23 @@ $ (function(){
 
 var $scoreDisplay = $('#score');
 var $main = $('#main');
-var $target = $('.easyTarget');
+var $etarget = $('.easyTarget');
+// var $mtarget
+var $htarget = $('.hardTarget');
 var score = 0;
+var easyTargetArray = ['#target0', '#target1'];
+var hardTargetArray = [];
+var $target0 = $('#target0')
+var $target1 = $('#target1')
+var interval = setInterval(function(){
+	animation();
+},9000);
 
 //Change to target when needed
-	$target.on('click', function(event){
+	$etarget.on('click', function(event){
 		console.log('Body click');
 		incrementScore();
-		$(this).slideUp(1000);
+		$(this).fadeOut(1000);
 		$(this).stop();
 
 	});
@@ -24,22 +33,51 @@ var score = 0;
 	};
 
 
-	$target.animate({bottom:'100px'},7000,function(){ //can set time after 100px
-		setTimeout(function(){
-		$target.animate({bottom:'-100px'});
-		},7000);
+	// $target.animate({bottom:'100px'},7000,function(){
+	// 	setTimeout(function(){
+	// 	$target.animate({bottom:'-100px'}, 5000);
+	// 	},7000);
 
-	});
+	// });
+
+	function animation(){
+
+		var selection = easySelector(easyTargetArray);
+		console.log(selection);
+
+		if ((selection == '#target0')||(selection =='#target1')) {
+					var string = $(selection);
+					string.animate({bottom:'100px'},7000,function(){
+					setTimeout(function(){
+					string.animate({bottom:'-100px'}, 5000);
+					},7000);
+			});
+
+		}
 
 
+		// if ($htarget){
+		// 			$(this).animate({bottom:'30px'},3000) setTimeout(function(){
+		// 			$(this).animate({bottom:'-100px'},3000);
+		// 	},3000);
+		// };
 
-	// function decend (){
-	// 	$(".easyTarget").slideUp(3000);
- //    };
+	};
+	
+	function easySelector(array) {
+		var max = 2;
+		var min = 0;
+  		var number =(Math.floor(Math.random() * (max - min)) + min);
+  		return (array[number]);
+}
+	animation();
 
+//To-do
 
-//For now use div to add click function
-//On click adds 10 to the score
+//Create and independant animate function
+//Set elements to be visable
+//Look into .delay
+
 
 
 
