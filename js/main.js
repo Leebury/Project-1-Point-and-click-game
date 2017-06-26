@@ -19,10 +19,16 @@ var interval = setInterval(function(){
 
 //Change to target when needed
 	$etarget.on('click', function(event){
+		var $this = $(this);
 		console.log('Body click');
 		incrementScore();
 		$(this).fadeOut(1000);
 		$(this).stop();
+		setTimeout(function(){
+			$this.css('bottom', '-100px');
+			$this.fadeIn(); 
+				}, 2000);
+
 
 	});
 
