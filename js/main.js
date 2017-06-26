@@ -12,7 +12,7 @@ var score = 0;
 	$target.on('click', function(event){
 		console.log('Body click');
 		incrementScore();
-		$(this).slideUp(3000);
+		$(this).slideUp(1000);
 
 	});
 
@@ -21,6 +21,15 @@ var score = 0;
 		score += 10;
 		$scoreDisplay.html(score);
 	}
+
+	$target.animate({bottom:'100px'},function(){ //can set time after 100px
+
+		setTimeout(function(){
+		$target.animate({bottom:'-100px'});
+		},1000);
+
+	});
+
 
 	// function decend (){
 	// 	$(".easyTarget").slideUp(3000);
