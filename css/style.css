@@ -11,7 +11,7 @@ body h1{
 	text-align: center;
 }
 
-div img{
+#target0{
 	position: absolute;
     height: 100px;
     width: 70px;
@@ -19,6 +19,14 @@ div img{
     bottom: 0;
 }
 
+#target1{
+	position: absolute;
+    height: 100px;
+    width: 70px;
+    display: inline-block;
+    bottom: 0;
+    right: 100px;
+}
 #score{
 
 

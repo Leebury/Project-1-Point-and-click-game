@@ -5,14 +5,14 @@ $ (function(){
 
 var $scoreDisplay = $('#score');
 var $main = $('#main');
-var $target = $('.target');
+var $target = $('.easyTarget');
 var score = 0;
 
 //Change to target when needed
 	$target.on('click', function(event){
 		console.log('Body click');
 		incrementScore();
-		decend();
+		$(this).slideUp(3000);
 
 	});
 
@@ -22,9 +22,9 @@ var score = 0;
 		$scoreDisplay.html(score);
 	}
 
-	function decend (){
-		$("#easyTarget").slideUp(3000);
-    };
+	// function decend (){
+	// 	$(".easyTarget").slideUp(3000);
+ //    };
 
 
 //For now use div to add click function
