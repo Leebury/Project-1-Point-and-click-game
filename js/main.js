@@ -22,11 +22,11 @@ var score = 0;
 		$scoreDisplay.html(score);
 	}
 
-	$target.animate({bottom:'100px'},function(){ //can set time after 100px
+	$target.animate({bottom:'100px'},7000,function(){ //can set time after 100px
 
 		setTimeout(function(){
 		$target.animate({bottom:'-100px'});
-		},1000);
+		},7000);
 
 	});
 
