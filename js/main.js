@@ -16,7 +16,7 @@ $(function(){
 	var $target1 = $('#target1')
 	var interval = setInterval(function(){
 		animation();
-	}, 3000);
+	}, 1000);
 
 
 	$('#finish').hide();
@@ -27,22 +27,29 @@ $(function(){
 		incrementScore(pointsToIncrease);
 		$(this).fadeOut();
 		$(this).hide();
-		$(this).stop();
+		
 
-		setTimeout(function() {
+		// setTimeout(function() {
 
-			if ($this.data('position') === ('bottom') {
+
+			if ($this.hasClass('bottom')) {
+
 					$this.css('bottom', '-100px');	
 					$this.show();
 
-			},2000);
+			} else if ($this.hasClass('left')){
 
-			else if ($this.data('left')){
-				$this.css('left', '-100px');
+				$this.css('left', '-35px');
+				$this.show();
+			} else if ($this.hasClass('right')){
+
+				$this.css('right', '-35px');
 				$this.show();
 			}
-		} , 2000);
-});
+			$(this).stop();
+		// } , 2000);
+	});
+
 	function incrementScore (points){
 		//May have to put if statement depending on target
 		score += points;
@@ -84,32 +91,38 @@ $(function(){
 		var selection = getRandomTarget()
 		console.log(selection);
 
-		if (selection.hasClass('easyTarget') && selection.data('position') === "bottom") {
+		if (selection.hasClass('easyTarget') && selection.hasClass('bottom')) {
 
 			selection.fadeIn();
-			selection.show();
-			selection.animate({bottom:'100px'},7000,function(){
-				setTimeout(function () {
-					selection.animate({ bottom: '-100px' }, 5000);
-				}, 7000);
-			});
+			// selection.show();
+			selection
+				.animate({bottom:'+=100px'},7000)
+				.delay(7000)
+				.animate({ bottom: '-=100px' }, 5000);
 
-		} else if (selection.hasClass('hardTarget') && selection.data('position') === "bottom") {
+		} else if (selection.hasClass('hardTarget') && selection.hasClass('bottom')) {
 			
+			// selection.fadeIn();
+			// selection.animate({bottom:'+=100px'},3000,function(){ 
+			// 	setTimeout(function(){
+			// 		selection.animate({bottom:'-=100px'},3000);
+			// 	},3000);
+			// })
 			selection.fadeIn();
-			selection.animate({bottom:'30px'},3000,function(){ 
-				setTimeout(function(){
-					selection.animate({bottom:'-100px'},3000);
-				},3000);
-})
-		} else if (selection.hasClass('hardTarget') && selection.data('position') === "bottom"){
+
+			selection
+				.animate({ bottom:'+=100px'},3000)
+				.delay(3000)
+				.animate({ bottom:'-=100px'},3000);
+			
+		} else if (selection.hasClass('hardTarget') && selection.hasClass('left')){
 
 			selection.fadeIn();
-			selection.animate({left:'100px'},3000,function(){ 
-				setTimeout(function(){
-					selection.animate({left:'-100px'},3000);
-				},3000);
-		})
+			selection
+				.animate({left:'+=100px'}, 3000)
+				.delay(3000)
+				.animate({left:'-=100px'}, 3000);
+				
 	};
 
 };
