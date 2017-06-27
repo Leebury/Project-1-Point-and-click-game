@@ -1,6 +1,6 @@
 #main{
 	background-color: red;
-	/*REMEMBER TO BLOCK OVERFLOW*/
+	overflow: hidden;
 	height: 600px;
     width: 600px;
     position: relative;
