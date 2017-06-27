@@ -1,41 +1,64 @@
 #main{
 	background-color: red;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	height: 600px;
     width: 600px;
     position: relative;
     margin: auto;
 }
 
+#finish{
+	background-color: green;
+	/*overflow: hidden;*/
+	height: 600px;
+    width: 600px;
+    position: relative;
+    margin: auto;
+/*    visibility: hidden;*/
+}
 body h1{
 	text-align: center;
 }
 
-#target0{
+.easyTarget{
+
 	position: absolute;
     height: 100px;
     width: 70px;
     display: inline-block;
+}
+
+.hardTarget{
+	position: absolute;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+
+}
+#target0{
+
     bottom: -100px;
 }
 
+
 #target1{
-	position: absolute;
-    height: 100px;
-    width: 70px;
-    display: inline-block;
+
     bottom: -100px;
     right: 100px;
 }
 
 
 #target2{
-	position: absolute;
-    height: 100px;
-    width: 70px;
-    display: inline-block;
+
     bottom: -100px;
     right: 300px;
+}
+
+#target3{
+	position: absolute;
+	height: 100px;
+	width: 70px;
+	display: inline-block;
 }
 
 #score{
