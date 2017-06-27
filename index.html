@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 	<body>
-		<h1>Sparta spear training</h1>
+		<h1 id='title'>Sparta spear training</h1>
 		<div id='main'>
 			<div>
 
@@ -18,22 +18,22 @@
 			</div>
 
 			<div>
-				<img src="images/Target-red.png" data-points="10" class="easyTarget" id='target0'>
+				<img src="images/Target-red.png" data-points="10" data-position="bottom" class="easyTarget" id='target0'>
 
 			</div>
 
 			<div>
-				<img src="images/Target-red.png" data-points="10" class="easyTarget" id='target1'>
+				<img src="images/Target-red.png" data-points="10" data-position="bottom" class="easyTarget" id='target1'>
 			</div>
 
 			<div>
-				<img src="images/Target-red.png" data-points="20" class="hardTarget" id='target2'>
+				<img src="images/Target-red.png" data-points="20" data-position="bottom" class="hardTarget" id='target2'>
 			</div>
 
-<!-- 			<div>
-				<img src="images/Target-red.png" data-points="20" class="hardTarget" id='target3'>
+			<div>
+				<img src="images/Target-red.png" data-points="20" data-position="left" class="hardTarget" id='target3'>
 			</div>
-
+<!-- 
 			<div>
 				<img src="images/Target-red.png" data-points="20" class="hardTarget" id='target4'>
 			</div> -->
@@ -45,7 +45,10 @@
 		</div>
 
 		<div id='finish'>
-		Score: <span id='finalScore'></span>
+		<h1 id='over'> Game over! </h1>
+		<h2>Your Score: <span id='finalScore'></span></h2>
+		
+
 
 		</div>
 

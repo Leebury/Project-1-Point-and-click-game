@@ -1,5 +1,5 @@
 #main{
-	background-color: red;
+	background-image: url("../images/mainBG.jpg");
 	/*overflow: hidden;*/
 	height: 600px;
     width: 600px;
@@ -14,6 +14,7 @@
     width: 600px;
     position: relative;
     margin: auto;
+    border-radius: 30px;
 /*    visibility: hidden;*/
 }
 body h1{
@@ -55,13 +56,13 @@ body h1{
 }
 
 #target3{
-	position: absolute;
-	height: 100px;
-	width: 70px;
-	display: inline-block;
+
+	left: -35px;
+    bottom: 260px;
 }
+
 
 #score{
 
-
 }
+
