@@ -5,12 +5,15 @@ $ (function(){
 
 var $scoreDisplay = $('#score');
 var $main = $('#main');
+var $timeDisplay = $('#time')
 // var $etarget = $('.easyTarget');
 // var $mtarget
 // var $htarget = $('.hardTarget');
 
 var $targets = $('.hardTarget, .easyTarget');
 var score = 0;
+var time = 60;
+var countdown= setInterval(timesUp, 1000);
 var easyTargetArray = ['#target0', '#target1'];
 var hardTargetArray = ['#target2'];
 var $target0 = $('#target0')
@@ -46,6 +49,18 @@ var interval = setInterval(function(){
 		score += points;
 		$scoreDisplay.html(score);
 	};
+
+	function timesUp(){
+ 	 time=time-1
+ 	 if (time <= -1){
+ 	 	clearInterval(countdown);
+
+ 	 	return;
+ 	 }
+ 	 document.getElementById("timer").innerHTML=time + " seconds";
+	}
+	
+
 
 	function getRandomTarget () {
 
