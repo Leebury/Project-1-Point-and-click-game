@@ -63,14 +63,14 @@ $(function(){
 			$('#finish').show();
 			$targets.stop();
 			clearInterval(interval);
+			endScore();
 	 	};
 	};
 
 	function endScore(){
 
 		var finalScore=$scoreDisplay.html();
-
-		finalScore.append('#finalScore');
+		$('#finalScore').append(finalScore);
 	}
 	
 
