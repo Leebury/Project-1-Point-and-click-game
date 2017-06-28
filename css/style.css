@@ -42,14 +42,14 @@
 
 }
 div h2{
-    border-style: ridge;
+
     text-align: center;
     margin: auto;
     display: inline-block;
     position: relative;
     left: 215px;
-    border-color: rgba(29, 244, 3, 0.89);
     color: rgba(223, 255, 0, 0.76);
+    font-family: Herculanum;
 
 
 }
@@ -57,6 +57,7 @@ div h2{
 #finish p{
 	text-align: center;
     color: yellow;
+    font-family: Herculanum;
 }
 #finalScore{
 
