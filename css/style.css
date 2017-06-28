@@ -1,25 +1,66 @@
 #main{
 	background-image: url("../images/mainBG.jpg");
-	/*overflow: hidden;*/
+	overflow: hidden;
 	height: 600px;
     width: 600px;
     position: relative;
     margin: auto;
 }
 
+
+#score{
+
+}
+
 #finish{
-	background-color: green;
-	/*overflow: hidden;*/
-	height: 600px;
+	background-image: url("../images/EndBG.png");
+	overflow: hidden;
+	height: 400px;
     width: 600px;
     position: relative;
     margin: auto;
     border-radius: 30px;
 /*    visibility: hidden;*/
 }
+
+#finish div{
+	text-align: center;
+}
+
+#over{
+	font-family: luminari;
+    color: chartreuse;
+
+}
+div h2{
+    border-style: ridge;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    left: 215px;
+    border-color: rgba(29, 244, 3, 0.89);
+    color: rgba(223, 255, 0, 0.76);
+
+
+}
+
+div p{
+	text-align: center;
+    color: yellow;
+}
+#finalScore{
+
+}
+
 body h1{
 	text-align: center;
 }
+
+#start{
+	background-image: url("../images/mainBG.jpg");
+}
+
 
 .easyTarget{
 
@@ -51,18 +92,31 @@ body h1{
 
 #target2{
 
-    bottom: -100px;
+    bottom: -35px;
     right: 300px;
 }
 
 #target3{
 
 	left: -35px;
-    bottom: 260px;
+    bottom: 140px;
 }
 
+#target4{
 
-#score{
-
+	left: -35px;
+    bottom: 325px;
 }
+
+#target5{
+
+	left: -70px;
+    bottom: 420px;
+}
+
+#target6{
+
+    left: -72px;
+    bottom: 210px;
+
 

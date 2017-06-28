@@ -8,6 +8,19 @@
 </head>
 	<body>
 		<h1 id='title'>Sparta spear training</h1>
+
+		<div id='start'>
+
+			<p>Welcome to your first day at Sparta and to start you off we have some spear training!</p>
+			<p>Here in Sparta we use ducks for everything!</p>
+			<p>So grab some spears and see how many of the pests you can hit before your time is up!</p>
+			<p>Smaller ducks are worth more points but they move fast</p>
+			<p>Goodluck!</p>
+			<button id='startGame'>Start Game</button>
+
+		</div>
+
+
 		<div id='main'>
 			<div>
 
@@ -18,25 +31,32 @@
 			</div>
 
 			<div>
-				<img src="images/Target-red.png" data-points="10" class="easyTarget bottom" id='target0'>
-
+				<img src="images/Target-red.png" data-points="10" class="easyTarget bottom bottomEasy" id='target0'>
 			</div>
 
 			<div>
-				<img src="images/Target-red.png" data-points="10"  class="easyTarget bottom" id='target1'>
+				<img src="images/Target-red.png" data-points="10"  class="easyTarget bottom bottomEasy" id='target1'>
 			</div>
 
 			<div>
-				<img src="images/Target-red.png" data-points="20"  class="hardTarget bottom" id='target2'>
+				<img src="images/Target-red.png" data-points="20"  class="hardTarget bottom bottomHard" id='target2'>
 			</div>
 
 			<div>
-				<img src="images/Target-red.png" data-points="20"  class="hardTarget left" id='target3'>
+				<img src="images/Target-red.png" data-points="20"  class="hardTarget left leftHard" id='target3'>
 			</div>
-<!-- 
+
 			<div>
-				<img src="images/Target-red.png" data-points="20" class="hardTarget" id='target4'>
-			</div> -->
+				<img src="images/Target-red.png" data-points="20" class="hardTarget left leftHard" id='target4'>
+			</div>
+
+			<div>
+				<img src="images/Target-red.png" data-points="10" class="easyTarget left leftEasy" id='target5'>
+			</div>
+
+			<div>
+				<img src="images/Target-red.png" data-points="10" class="easyTarget left leftEasy" id='target6'>
+			</div>
 
 
 
@@ -45,11 +65,16 @@
 		</div>
 
 		<div id='finish'>
-		<h1 id='over'> Game over! </h1>
-		<h2>Your Score: <span id='finalScore'></span></h2>
+
+			<h1 id='over'> Game over! </h1>
+			<h2>Your Score: <span id='finalScore'></span></h2>
+
+			<p>Think you could use more training?</p>
+
+			<div>
+				<button id='playAgain'>Play again!</button>
+			</div>
 		
-
-
 		</div>
 
 

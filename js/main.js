@@ -8,18 +8,31 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 100;
-	var countdown= setInterval(timesUp, 1000);
-	var easyTargetArray = ['#target0', '#target1'];
-	var hardTargetArray = ['#target2'];
+	var time = 5;
+	var $start = $('#start');
+	// var countdown = setInterval(timesUp, 1000);
+	var $startGame = $('#startGame');
+	// var easyTargetArray = ['#target0', '#target1'];
+	// var hardTargetArray = ['#target2'];
 	var $target0 = $('#target0')
 	var $target1 = $('#target1')
-	var interval = setInterval(function(){
-		animation();
-	}, 1000);
+	// var interval = setInterval(function(){
+	// 	animation();
+	// }, 2000);
+
 
 
 	$('#finish').hide();
+	$main.hide();
+
+	$startGame.on('click', function(event){
+		var countdown = setInterval(timesUp, 1000);
+		$start.hide();
+		$main.show();
+		var interval = setInterval(function(){
+			animation();
+		}, 2000);
+	})
 
 	$targets.on('click', function(event){
 		var $this = $(this);		
@@ -27,26 +40,38 @@ $(function(){
 		incrementScore(pointsToIncrease);
 		$(this).fadeOut();
 		$(this).hide();
+		$(this).stop();
 		
-
-		// setTimeout(function() {
-
-
-			if ($this.hasClass('bottom')) {
+			if ($this.hasClass('bottomHard')) {
 
 					$this.css('bottom', '-100px');	
 					$this.show();
+					$this.fadeOut();
 
-			} else if ($this.hasClass('left')){
+			} else if ($this.hasClass('bottomEasy')) {
 
-				$this.css('left', '-35px');
-				$this.show();
+					$this.css('bottom', '-100px');	
+					$this.show();
+					$this.fadeOut();
+
+			} else if ($this.hasClass('leftHard')){
+
+					$this.css('left', '-35px');
+					$this.show();
+					$this.fadeOut();
+
+			} else if ($this.hasClass('leftEasy')){
+
+					$this.css('left', '-35px');
+					$this.show();
+					$this.fadeOut();
+
 			} else if ($this.hasClass('right')){
 
-				$this.css('right', '-35px');
-				$this.show();
+					$this.css('right', '-35px');
+					$this.show();
 			}
-			$(this).stop();
+
 		// } , 2000);
 	});
 
@@ -59,7 +84,7 @@ $(function(){
 	function timesUp(){
 	 	time=time-1
 	 	if (time <= -1){
-	 	 	clearInterval(countdown);
+	 	 	 // clearInterval(countdown);
 	 	 	return;
 	 	}
 	 	$("#timer").html(time + " seconds");
@@ -67,7 +92,8 @@ $(function(){
 			$('#main').hide();
 			$('#finish').show();
 			$targets.stop();
-			clearInterval(interval);
+
+			// clearInterval(interval);
 			endScore();
 	 	};
 	};
@@ -91,17 +117,18 @@ $(function(){
 		var selection = getRandomTarget()
 		console.log(selection);
 
-		if (selection.hasClass('easyTarget') && selection.hasClass('bottom')) {
+		if (selection.hasClass('bottomEasy')) {
 
 			selection.fadeIn();
 			// selection.show();
 			selection
-				.animate({bottom:'+=100px'},7000)
-				.delay(7000)
-				.animate({ bottom: '-=100px' }, 5000);
+				.animate({bottom:'+=100px'},3000)
+				// .delay(3000)
+				.animate({ bottom:'-=100px'},3000);
 
-		} else if (selection.hasClass('hardTarget') && selection.hasClass('bottom')) {
+		} else if (selection.hasClass('bottomHard')) {
 			
+			//Old code, keep for now
 			// selection.fadeIn();
 			// selection.animate({bottom:'+=100px'},3000,function(){ 
 			// 	setTimeout(function(){
@@ -109,21 +136,26 @@ $(function(){
 			// 	},3000);
 			// })
 			selection.fadeIn();
-
 			selection
-				.animate({ bottom:'+=100px'},3000)
-				.delay(3000)
-				.animate({ bottom:'-=100px'},3000);
+				.animate({ bottom:'+=100px'},1000)
+				// .delay(1000)
+				.animate({ bottom:'-=100px'},1000);
 			
-		} else if (selection.hasClass('hardTarget') && selection.hasClass('left')){
+		} else if (selection.hasClass('leftEasy')){
 
 			selection.fadeIn();
 			selection
-				.animate({left:'+=100px'}, 3000)
-				.delay(3000)
-				.animate({left:'-=100px'}, 3000);
+				.animate({left:'+=100px'},1000)
+				// .delay(1000)
+				.animate({left:'-=100px'}, 1000);
 				
-	};
+	} else if (selection.hasClass('leftHard')){
+			selection.fadeIn();
+			selection
+				.animate({left:'+=100px'},3000)
+				// .delay(3000)
+				.animate({left:'-=100px'}, 3000);
+	}
 
 };
 
@@ -132,8 +164,6 @@ $(function(){
 
 
 	animation();
-//To-do
 
-//Look into .delay
 
 });
