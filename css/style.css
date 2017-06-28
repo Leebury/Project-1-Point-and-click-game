@@ -20,6 +20,23 @@
 #title{
 	font-family: luminari;
 }
+#playAgain{
+	border-radius: 15px;
+    font-family: Herculanum;
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#startGame{
+	border-radius: 10px;
+    background-color: aqua;
+    border: solid;
+    font-family: Herculanum;
+    font-size: 18px;
+
+}
 
 #finish{
 	background-image: url("../images/EndBG.png");
@@ -38,7 +55,7 @@
 
 #over{
 	font-family: luminari;
-    color: chartreuse;
+    color: white;
 
 }
 div h2{
@@ -48,7 +65,7 @@ div h2{
     display: inline-block;
     position: relative;
     left: 215px;
-    color: rgba(223, 255, 0, 0.76);
+    color: white;
     font-family: Herculanum;
 
 
@@ -56,7 +73,7 @@ div h2{
 
 #finish p{
 	text-align: center;
-    color: yellow;
+    color: white;
     font-family: Herculanum;
 }
 #finalScore{
