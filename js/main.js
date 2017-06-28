@@ -8,7 +8,7 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 5;
+	var time = 100;
 	var $start = $('#start');
 	// var countdown = setInterval(timesUp, 1000);
 	var $startGame = $('#startGame');
@@ -77,7 +77,6 @@ $(function(){
 	});
 
 	function incrementScore (points){
-		//May have to put if statement depending on target
 		score += points;
 		$scoreDisplay.html(score);
 	};
@@ -85,7 +84,6 @@ $(function(){
 	function timesUp(){
 	 	time=time-1
 	 	if (time <= -1){
-	 	 	 // clearInterval(countdown);
 	 	 	return;
 	 	}
 	 	$("#timer").html(time + " seconds");
@@ -93,8 +91,6 @@ $(function(){
 			$('#main').hide();
 			$('#finish').show();
 			$targets.stop();
-
-			// clearInterval(interval);
 			endScore();
 	 	};
 	};
@@ -121,41 +117,35 @@ $(function(){
 		if (selection.hasClass('bottomEasy')) {
 
 			selection.fadeIn();
-			// selection.show();
 			selection
-				.animate({bottom:'+=100px'},3000)
+				.animate({bottom:'+=100px'},3000, function(){
 				// .delay(3000)
-				.animate({ bottom:'-=100px'},3000);
-
+				$(this).animate({ bottom:'-=100px'},3000);
+			});
 		} else if (selection.hasClass('bottomHard')) {
 			
-			//Old code, keep for now
-			// selection.fadeIn();
-			// selection.animate({bottom:'+=100px'},3000,function(){ 
-			// 	setTimeout(function(){
-			// 		selection.animate({bottom:'-=100px'},3000);
-			// 	},3000);
-			// })
+
 			selection.fadeIn();
 			selection
-				.animate({ bottom:'+=100px'},1000)
+				.animate({ bottom:'+=100px'},1000,function(){
 				// .delay(1000)
-				.animate({ bottom:'-=100px'},1000);
-			
+				$(this).animate({ bottom:'-=100px'},1000);
+			});		
 		} else if (selection.hasClass('leftEasy')){
 
 			selection.fadeIn();
 			selection
-				.animate({left:'+=100px'},1000)
+				.animate({left:'+=100px'},1000,function(){
 				// .delay(1000)
-				.animate({left:'-=100px'}, 1000);
-				
+				$(this).animate({left:'-=100px'},1000);
+			});
 	} else if (selection.hasClass('leftHard')){
 			selection.fadeIn();
 			selection
-				.animate({left:'+=100px'},3000)
+				.animate({left:'+=100px'},3000,function(){
 				// .delay(3000)
-				.animate({left:'-=100px'}, 3000);
+				$(this).animate({left:'-=100px'}, 3000);
+		});
 	}
 
 };
