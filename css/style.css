@@ -7,9 +7,18 @@
     margin: auto;
 }
 
+#start p {
+	text-align: center;
+    font-family: Herculanum;
+    color: black;
 
-#score{
+}
 
+#start{
+	text-align: center;
+}
+#title{
+	font-family: luminari;
 }
 
 #finish{
@@ -45,7 +54,7 @@ div h2{
 
 }
 
-div p{
+#finish p{
 	text-align: center;
     color: yellow;
 }

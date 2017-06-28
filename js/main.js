@@ -12,6 +12,7 @@ $(function(){
 	var $start = $('#start');
 	// var countdown = setInterval(timesUp, 1000);
 	var $startGame = $('#startGame');
+	var $playAgain = $('#playAgain');
 	// var easyTargetArray = ['#target0', '#target1'];
 	// var hardTargetArray = ['#target2'];
 	var $target0 = $('#target0')
@@ -161,7 +162,10 @@ $(function(){
 
 //Incase of code break
 // && selection.data('position') === "bottom")
+$playAgain.on('click',function(event){
 
+	location.reload();
+})
 
 	animation();
 
