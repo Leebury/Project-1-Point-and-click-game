@@ -2,13 +2,17 @@ console.log('Linked up');
 
 $(function(){
 
+//To-do
+//Add sounds to click
+//Leaderboard
+//Diagonal targets
 
 	var $scoreDisplay = $('#score');
 	var $main = $('#main');
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 100;
+	var time = 60;
 	var $start = $('#start');
 	// var countdown = setInterval(timesUp, 1000);
 	var $startGame = $('#startGame');
@@ -63,11 +67,16 @@ $(function(){
 
 			} else if ($this.hasClass('leftEasy')){
 
-					$this.css('left', '-35px');
+					$this.css('left', '-100px');
 					$this.show();
 					$this.fadeOut();
 
-			} else if ($this.hasClass('right')){
+			} else if ($this.hasClass('rightEasy')){
+
+					$this.css('right', '-70px');
+					$this.show();
+
+			} else if ($this.hasClass('leftHard')){
 
 					$this.css('right', '-35px');
 					$this.show();
@@ -118,40 +127,51 @@ $(function(){
 
 			selection.fadeIn();
 			selection
-				.animate({bottom:'+=100px'},3000, function(){
+				.animate({bottom:'+=100px'},2000, function(){
 				// .delay(3000)
-				$(this).animate({ bottom:'-=100px'},3000);
+				$(this).animate({ bottom:'-=100px'},2000);
 			});
-		} else if (selection.hasClass('bottomHard')) {
-			
 
+		} else if (selection.hasClass('bottomHard')) {
 			selection.fadeIn();
 			selection
 				.animate({ bottom:'+=100px'},1000,function(){
 				// .delay(1000)
 				$(this).animate({ bottom:'-=100px'},1000);
 			});		
-		} else if (selection.hasClass('leftEasy')){
 
+		} else if (selection.hasClass('leftEasy')){
 			selection.fadeIn();
 			selection
-				.animate({left:'+=100px'},1000,function(){
+				.animate({left:'+=100px'},2000,function(){
 				// .delay(1000)
-				$(this).animate({left:'-=100px'},1000);
+				$(this).animate({left:'-=100px'},2000);
 			});
+
 	} else if (selection.hasClass('leftHard')){
 			selection.fadeIn();
 			selection
-				.animate({left:'+=100px'},3000,function(){
+				.animate({left:'+=135px'},1000,function(){
 				// .delay(3000)
-				$(this).animate({left:'-=100px'}, 3000);
+				$(this).animate({left:'-=135px'}, 1000);
+		});
+	} else if (selection.hasClass('rightEasy')){
+			selection.fadeIn();
+			selection
+				.animate({right:'+=100px'},1000,function(){
+				// .delay(3000)
+				$(this).animate({right:'-=100px'}, 1000);
+		});
+	} else if (selection.hasClass('rightHard')){
+			selection.fadeIn();
+			selection
+				.animate({right:'+=135px'},1000,function(){
+				// .delay(3000)
+				$(this).animate({right:'-=135px'}, 1000);
 		});
 	}
-
 };
 
-//Incase of code break
-// && selection.data('position') === "bottom")
 $playAgain.on('click',function(event){
 
 	location.reload();
