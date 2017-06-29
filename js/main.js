@@ -19,7 +19,7 @@ $(function(){
 	var $target0 = $('#target0')
 	var $target1 = $('#target1')
 	var sndThrow = new Audio("https://raw.githubusercontent.com/Leebury/Project-1-Point-and-click-game/master/sounds/Throw.wav");
-	var sndQuack = new Audio("../project-one/sounds/quack.wav");
+	var sndQuack = new Audio("https://raw.githubusercontent.com/Leebury/Project-1-Point-and-click-game/master/sounds/quack.wav");
 	var $highScores = $('#highScores');
 
 
