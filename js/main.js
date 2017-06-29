@@ -14,17 +14,10 @@ $(function(){
 	var score = 0;
 	var time = 60;
 	var $start = $('#start');
-	// var countdown = setInterval(timesUp, 1000);
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
-	// var easyTargetArray = ['#target0', '#target1'];
-	// var hardTargetArray = ['#target2'];
 	var $target0 = $('#target0')
 	var $target1 = $('#target1')
-	// var interval = setInterval(function(){
-	// 	animation();
-	// }, 2000);
-
 
 
 	$('#finish').hide();
@@ -76,7 +69,7 @@ $(function(){
 					$this.css('right', '-70px');
 					$this.show();
 
-			} else if ($this.hasClass('leftHard')){
+			} else if ($this.hasClass('rightHard')){
 
 					$this.css('right', '-35px');
 					$this.show();

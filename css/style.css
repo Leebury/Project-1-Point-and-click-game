@@ -13,10 +13,15 @@
     font-family: Herculanum;
     color: black;
 
+
 }
 
 #start{
 	text-align: center;
+	background-size: 100% 100%;
+	width: 47%;
+    position: relative;
+    margin: auto;
 }
 #title{
 	font-family: luminari;
