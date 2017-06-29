@@ -12,7 +12,7 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 6000;
+	var time = 60;
 	var $start = $('#start');
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
@@ -33,7 +33,7 @@ $(function(){
 		$main.show();
 		var interval = setInterval(function(){
 			animation();
-		}, 2000);
+		}, 1000);
 	})
 
 	$main.on('click', function(event){
@@ -87,6 +87,13 @@ $(function(){
 
 		// } , 2000);
 	});
+
+	$(document).ready(function() {
+    $main.on("contextmenu",function(e){
+       return false;
+    }); 
+}); 
+
 
 	function incrementScore (points){
 		score += points;

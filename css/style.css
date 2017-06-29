@@ -12,6 +12,7 @@
 	text-align: center;
     font-family: Herculanum;
     color: black;
+    font-size: 25px;
 
 
 }
@@ -19,7 +20,8 @@
 #start{
 	text-align: center;
 	background-size: 100% 100%;
-	width: 47%;
+	height: 800px;
+	width: 800px;
     position: relative;
     margin: auto;
 }
@@ -32,7 +34,7 @@
     background-color: aqua;
     color: black;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 #startGame{
@@ -48,8 +50,8 @@
 	background-image: url("../images/EndBG.png");
 	background-size: 100% 100%;
 	overflow: hidden;
-	height: 400px;
-    width: 600px;
+	height: 800px;
+    width: 800px;
     position: relative;
     margin: auto;
     border-radius: 30px;
@@ -58,11 +60,13 @@
 
 #finish div{
 	text-align: center;
+	font-size: 60px;
 }
 
 #over{
 	font-family: luminari;
     color: white;
+    font-size: 50px;
 
 }
 div h2{
@@ -71,7 +75,7 @@ div h2{
     margin: auto;
     display: inline-block;
     position: relative;
-    left: 215px;
+    left: 305px;
     color: white;
     font-family: Herculanum;
 
@@ -79,9 +83,11 @@ div h2{
 }
 
 #finish p{
+
 	text-align: center;
     color: white;
     font-family: Herculanum;
+    font-size: 25px;
 }
 #finalScore{
 
@@ -154,7 +160,7 @@ body h1{
 }
 
 #target7{
-	
+
     bottom: 540px;
     left: -70px;
 }
