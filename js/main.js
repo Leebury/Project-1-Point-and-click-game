@@ -84,14 +84,8 @@ $(function(){
 
 					$this.css('right', '-35px');
 					$this.show();
-			// } else if ($this.hasClass('diagonal')){
-
-			// 		$this.css('bottom: -35px');
-   //  			$this.css('left: 800px');
-   //  			$this.show();
 			}
 
-		// } , 2000);
 	});
 
 	$(document).ready(function() {
@@ -126,8 +120,6 @@ $(function(){
 		$('#finalScore').append(finalScore);
 	}
 	
-
-
 	function getRandomTarget () {
 
 		var randomNumber = Math.floor(Math.random()*( $targets.length - 0))
@@ -179,11 +171,7 @@ $(function(){
 				.animate({right:'+=135px'},1000,function(){
 				$(this).animate({right:'-=135px'}, 1000);
 		});
-	// } else if (selection.hasClass('diagonal')){
-	// 		selection.fadeIn();
-	// 		selection
-	// 			.animate({bottom: '+=100', right: '+=100'}, 1000,function(){
-	// 			$(this).animate({bottom: '+=100', right: '+=100'}, 1000);
+
 	};
 
 };
