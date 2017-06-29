@@ -12,7 +12,7 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 5;
+	var time = 60;
 	var $start = $('#start');
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
