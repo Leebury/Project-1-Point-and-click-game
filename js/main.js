@@ -12,14 +12,15 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 60;
+	var time = 5;
 	var $start = $('#start');
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
 	var $target0 = $('#target0')
 	var $target1 = $('#target1')
-	var sndThrow = new Audio("Throw.wav");
-	var sndQuack = new Audio("quack.wav")
+	var sndThrow = new Audio("../project-one/sounds/Throw.wav");
+	var sndQuack = new Audio("../project-one/sounds/quack.wav");
+	var $highScores = $('#highScores');
 
 
 
@@ -83,6 +84,11 @@ $(function(){
 
 					$this.css('right', '-35px');
 					$this.show();
+			// } else if ($this.hasClass('diagonal')){
+
+			// 		$this.css('bottom: -35px');
+   //  			$this.css('left: 800px');
+   //  			$this.show();
 			}
 
 		// } , 2000);
@@ -138,7 +144,6 @@ $(function(){
 			selection.fadeIn();
 			selection
 				.animate({bottom:'+=120px'},2000, function(){
-				// .delay(3000)
 				$(this).animate({ bottom:'-=120px'},2000);
 			});
 
@@ -146,7 +151,6 @@ $(function(){
 			selection.fadeIn();
 			selection
 				.animate({ bottom:'+=150px'},1000,function(){
-				// .delay(1000)
 				$(this).animate({ bottom:'-=150px'},1000);
 			});		
 
@@ -154,7 +158,6 @@ $(function(){
 			selection.fadeIn();
 			selection
 				.animate({left:'+=100px'},2000,function(){
-				// .delay(1000)
 				$(this).animate({left:'-=100px'},2000);
 			});
 
@@ -162,24 +165,27 @@ $(function(){
 			selection.fadeIn();
 			selection
 				.animate({left:'+=135px'},1000,function(){
-				// .delay(3000)
 				$(this).animate({left:'-=135px'}, 1000);
 		});
 	} else if (selection.hasClass('rightEasy')){
 			selection.fadeIn();
 			selection
 				.animate({right:'+=100px'},1000,function(){
-				// .delay(3000)
 				$(this).animate({right:'-=100px'}, 1000);
 		});
 	} else if (selection.hasClass('rightHard')){
 			selection.fadeIn();
 			selection
 				.animate({right:'+=135px'},1000,function(){
-				// .delay(3000)
 				$(this).animate({right:'-=135px'}, 1000);
 		});
-	}
+	// } else if (selection.hasClass('diagonal')){
+	// 		selection.fadeIn();
+	// 		selection
+	// 			.animate({bottom: '+=100', right: '+=100'}, 1000,function(){
+	// 			$(this).animate({bottom: '+=100', right: '+=100'}, 1000);
+	};
+
 };
 
 $playAgain.on('click',function(event){

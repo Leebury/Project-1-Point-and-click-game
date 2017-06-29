@@ -8,6 +8,10 @@
     margin: auto;
 }
 
+#main div{
+	font-size: 20px;
+}
+
 #start p {
 	text-align: center;
     font-family: Herculanum;
@@ -36,6 +40,7 @@
     font-weight: bold;
     font-size: 20px;
 }
+
 
 #startGame{
 	border-radius: 10px;
@@ -112,8 +117,8 @@ body h1{
 
 .hardTarget{
 	position: absolute;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     display: inline-block;
 
 }
@@ -214,3 +219,8 @@ body h1{
     bottom: 445px;
 }
 
+#target16{
+
+	bottom: -35px;
+    left: 800px;
+}
