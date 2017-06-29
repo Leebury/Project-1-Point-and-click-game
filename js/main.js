@@ -18,11 +18,15 @@ $(function(){
 	var $playAgain = $('#playAgain');
 	var $target0 = $('#target0')
 	var $target1 = $('#target1')
+	var sndThrow = new Audio("Throw.wav");
+	var sndQuack = new Audio("quack.wav")
+
+
+
 
 
 	$('#finish').hide();
 	$main.hide();
-
 	$startGame.on('click', function(event){
 		var countdown = setInterval(timesUp, 1000);
 		$start.hide();
@@ -32,6 +36,10 @@ $(function(){
 		}, 2000);
 	})
 
+	$main.on('click', function(event){
+		sndThrow.play();
+	})
+
 	$targets.on('click', function(event){
 		var $this = $(this);		
 		var pointsToIncrease = $this.data('points');
@@ -39,6 +47,8 @@ $(function(){
 		$(this).fadeOut();
 		$(this).hide();
 		$(this).stop();
+		sndQuack.play();
+
 		
 			if ($this.hasClass('bottomHard')) {
 
