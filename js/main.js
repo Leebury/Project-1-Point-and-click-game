@@ -12,7 +12,7 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 60;
+	var time = 6000;
 	var $start = $('#start');
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
@@ -130,17 +130,17 @@ $(function(){
 
 			selection.fadeIn();
 			selection
-				.animate({bottom:'+=100px'},2000, function(){
+				.animate({bottom:'+=120px'},2000, function(){
 				// .delay(3000)
-				$(this).animate({ bottom:'-=100px'},2000);
+				$(this).animate({ bottom:'-=120px'},2000);
 			});
 
 		} else if (selection.hasClass('bottomHard')) {
 			selection.fadeIn();
 			selection
-				.animate({ bottom:'+=100px'},1000,function(){
+				.animate({ bottom:'+=150px'},1000,function(){
 				// .delay(1000)
-				$(this).animate({ bottom:'-=100px'},1000);
+				$(this).animate({ bottom:'-=150px'},1000);
 			});		
 
 		} else if (selection.hasClass('leftEasy')){

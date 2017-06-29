@@ -2,8 +2,8 @@
 	background-image: url("../images/mainBG.jpg");
 	background-size: 100% 100%;
 	overflow: hidden;
-	height: 600px;
-    width: 600px;
+	height: 800px;
+    width: 800px;
     position: relative;
     margin: auto;
 }
@@ -130,37 +130,81 @@ body h1{
 }
 
 #target3{
+	bottom: -35px;
+    right: 540px;
 
-	left: -35px;
-    bottom: 140px;
 }
 
 #target4{
 
 	left: -35px;
-    bottom: 325px;
+    bottom: 140px;
 }
 
 #target5{
+
+	left: -35px;
+    bottom: 325px;
+}
+
+#target6{
 
 	left: -70px;
     bottom: 420px;
 }
 
-#target6{
+#target7{
+	
+    bottom: 540px;
+    left: -70px;
+}
+
+#target8{
+
+	left: -70px;
+}
+
+#target9{
 
     left: -72px;
     bottom: 210px;
 }
-#target7{
+
+#target10{
 
 	right: -70px;
 }
 
-#target8{
+#target11{
 
 	right: -35px;
     bottom: 130px;
 }
 
+
+#target12{
+
+	right: -35px;
+    bottom: 350px;
+}
+
+#target13{
+
+	right: -35px;
+    bottom: 635px;
+
+}
+
+#target14{
+
+	right: -75px;
+    bottom: 210px;
+
+}
+
+#target15{
+
+	right: -75px;
+    bottom: 445px;
+}
 
