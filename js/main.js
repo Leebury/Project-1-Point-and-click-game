@@ -12,7 +12,7 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 60;
+	var time = 30;
 	var $start = $('#start');
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
@@ -53,7 +53,7 @@ $(function(){
 		
 			if ($this.hasClass('bottomHard')) {
 
-					$this.css('bottom', '-100px');	
+					$this.css('bottom', '-40px');	
 					$this.show();
 					$this.fadeOut();
 
@@ -65,7 +65,7 @@ $(function(){
 
 			} else if ($this.hasClass('leftHard')){
 
-					$this.css('left', '-35px');
+					$this.css('left', '-40px');
 					$this.show();
 					$this.fadeOut();
 
@@ -82,7 +82,7 @@ $(function(){
 
 			} else if ($this.hasClass('rightHard')){
 
-					$this.css('right', '-35px');
+					$this.css('right', '-40px');
 					$this.show();
 			}
 
@@ -153,19 +153,19 @@ $(function(){
 				$(this).animate({left:'-=100px'},2000);
 			});
 
-	} else if (selection.hasClass('leftHard')){
+	 } else if (selection.hasClass('leftHard')){
 			selection.fadeIn();
 			selection
 				.animate({left:'+=135px'},1000,function(){
 				$(this).animate({left:'-=135px'}, 1000);
 		});
-	} else if (selection.hasClass('rightEasy')){
+	 } else if (selection.hasClass('rightEasy')){
 			selection.fadeIn();
 			selection
 				.animate({right:'+=100px'},1000,function(){
 				$(this).animate({right:'-=100px'}, 1000);
 		});
-	} else if (selection.hasClass('rightHard')){
+	 } else if (selection.hasClass('rightHard')){
 			selection.fadeIn();
 			selection
 				.animate({right:'+=135px'},1000,function(){

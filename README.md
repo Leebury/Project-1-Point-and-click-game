@@ -10,7 +10,7 @@ You can either download the repository and open the index.html file to run the g
 The game itself is very simple, The point is to try and score as many points as possible in 60 seconds, The larger ducks are worth 20 points while the smaller targets are worth 10 points. 
 
 The ducks will appear randomly on the edge of the screen and will vanish once clicked, There's a 'Quack' sound effect to confirm if a duck has been hit.
-![Main game screenshot](/Users/Tech-A11/Desktop/Screen Shot 2017-06-29 at 14.38.39.png)
+![Main game screenshot](images/Screenshot.png)
 
 
 ###Technologies used
