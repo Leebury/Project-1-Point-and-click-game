@@ -1,6 +1,5 @@
 $(function(){
 
-
 	var $scoreDisplay = $('#score');
 	var $main = $('#main');
 	var $timeDisplay = $('#time')
@@ -33,6 +32,8 @@ $(function(){
 	$main.on('click', function(event){
 		sndThrow.play();
 	})
+
+	$main.css('cursor','crosshair');
 
 	$targets.on('click', function(event){
 		var $this = $(this);		

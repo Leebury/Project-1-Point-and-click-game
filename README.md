@@ -18,3 +18,5 @@ This project was done using html, css, javascript and Jquery.
 
 ###Further work
 Continuing on from this i'd like to add a few more features to polish this game off properly, Such as a level system which increases the speed of the targets as well as the points awarded per target.
+
+Fully implement the leaderboard to store the scores and add them into a top 5.
