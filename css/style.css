@@ -29,9 +29,11 @@
     position: relative;
     margin: auto;
 }
+
 #title{
 	font-family: luminari;
 }
+
 #playAgain{
 	border-radius: 15px;
     font-family: Herculanum;
@@ -41,6 +43,11 @@
     font-size: 20px;
 }
 
+#highscore{
+	font-size: 35px;
+	font-family: Herculanum;
+	color: white;
+}
 
 #startGame{
 	border-radius: 10px;
@@ -49,6 +56,15 @@
     font-family: Herculanum;
     font-size: 18px;
 
+}
+
+#submit{
+
+	border-radius: 10px;
+    background-color: aqua;
+    border: solid;
+    font-family: Herculanum;
+    font-size: 18px;
 }
 
 #finish{
@@ -61,6 +77,14 @@
     margin: auto;
     border-radius: 30px;
 /*    visibility: hidden;*/
+}
+
+div ol li{
+
+	font-size: 35px;
+	color: white;
+	font-family: Herculanum;
+
 }
 
 #finish div{
@@ -100,6 +124,16 @@ div h2{
 }
 #finalScore{
 
+}
+
+div input{
+	
+	background: transparent;
+    height: 21px;
+    font-family: Herculanum;
+    color: white;
+    font-size: 25px;
+    width: 70px;
 }
 
 body h1{

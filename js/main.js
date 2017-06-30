@@ -18,6 +18,7 @@ $(function(){
 	var sndQuack = new Audio("https://raw.githubusercontent.com/Leebury/Project-1-Point-and-click-game/master/sounds/quack.wav");
 	var $highScores = $('#highScores');
 	var finalScore;
+	var $submit = $('#submit');
 
 
 	$('#finish').hide();
@@ -46,42 +47,42 @@ $(function(){
 
 		//If statement to reset the position of the ducks on click
 		
-			if ($this.hasClass('bottomHard')) {
+		if ($this.hasClass('bottomHard')) {
 
-					$this.css('bottom', '-40px');	
-					$this.show();
-					$this.fadeOut();
+				$this.css('bottom', '-40px');	
+				$this.show();
+				$this.fadeOut();
 
-			} else if ($this.hasClass('bottomEasy')) {
+		} else if ($this.hasClass('bottomEasy')) {
 
-					$this.css('bottom', '-100px');	
-					$this.show();
-					$this.fadeOut();
+				$this.css('bottom', '-100px');	
+				$this.show();
+				$this.fadeOut();
 
-			} else if ($this.hasClass('leftHard')){
+		} else if ($this.hasClass('leftHard')){
 
-					$this.css('left', '-40px');
-					$this.show();
-					$this.fadeOut();
+				$this.css('left', '-40px');
+				$this.show();
+				$this.fadeOut();
 
-			} else if ($this.hasClass('leftEasy')){
+		} else if ($this.hasClass('leftEasy')){
 
-					$this.css('left', '-100px');
-					$this.show();
-					$this.fadeOut();
+				$this.css('left', '-100px');
+				$this.show();
+				$this.fadeOut();
 
-			} else if ($this.hasClass('rightEasy')){
+		} else if ($this.hasClass('rightEasy')){
 
-					$this.css('right', '-70px');
-					$this.show();
+				$this.css('right', '-70px');
+				$this.show();
 
-			} else if ($this.hasClass('rightHard')){
+		} else if ($this.hasClass('rightHard')){
 
-					$this.css('right', '-40px');
-					$this.show();
-			}
+				$this.css('right', '-40px');
+				$this.show();
+		}
 
-		});
+	});
 
 	$(document).ready(function() {
     $main.on("contextmenu",function(e){
@@ -113,21 +114,29 @@ $(function(){
 
 		finalScore=$scoreDisplay.html();
 		$('#finalScore').append(finalScore);
-		leaderboard();
+		// leaderboard();
+		// getScores();
+	}
+
+	function leaderboard(data){
+
+		var final = JSON.stringify(data);
+		localStorage.setItem('leaderScore', final);
 		getScores();
 	}
 
-	function leaderboard(){
-
-		localStorage.setItem('leaderScore', finalScore);
-	}
-
 	function getScores(){
-		debugger
-		var getScore = localStorage.getItem('leaderScore');
-		$('ol').append(getScore);
+
+		var getScore = JSON.parse(localStorage.getItem('leaderScore'));
+		$('ol').append('<li>'+getScore.name+' '+getScore.score+'</li>');
 
 	}
+
+	$submit.on('click', function(event){
+		var data = {'name': $('input').val() , 'score': finalScore};
+		leaderboard(data);
+
+	})
 	
 	function getRandomTarget () {
 
