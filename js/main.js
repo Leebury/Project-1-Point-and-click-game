@@ -1,5 +1,3 @@
-console.log('Linked up');
-
 $(function(){
 
 
@@ -8,7 +6,7 @@ $(function(){
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 5;
+	var time = 30;
 	var $start = $('#start');
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
@@ -120,8 +118,6 @@ $(function(){
 
 		var final = JSON.stringify(data);
 		localStorage.setItem('leaderScore', final);
-		localStorage.setItem('leaderScore2', final);
-		localStorage.setItem('leaderScore3', final);
 		getScores();
 	}
 
