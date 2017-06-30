@@ -114,14 +114,14 @@ $(function(){
 
 		finalScore=$scoreDisplay.html();
 		$('#finalScore').append(finalScore);
-		// leaderboard();
-		// getScores();
 	}
 
 	function leaderboard(data){
 
 		var final = JSON.stringify(data);
 		localStorage.setItem('leaderScore', final);
+		localStorage.setItem('leaderScore2', final);
+		localStorage.setItem('leaderScore3', final);
 		getScores();
 	}
 
@@ -146,8 +146,7 @@ $(function(){
 
 	function animation(){
 
-		var selection = getRandomTarget()
-		console.log(selection);
+		var selection = getRandomTarget();
 
 		if (selection.hasClass('bottomEasy')) {
 
