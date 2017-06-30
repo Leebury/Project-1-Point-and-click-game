@@ -110,6 +110,14 @@ body h1{
 	background-image: url("../images/MainBG.jpg");
 }
 
+#leaderboard{
+
+	text-align: center;
+    padding-left: 0px;
+    display: inline-block;
+    font-size: 40px;
+}
+
 
 .easyTarget{
 

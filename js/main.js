@@ -2,17 +2,13 @@ console.log('Linked up');
 
 $(function(){
 
-//To-do
-//Add sounds to click
-//Leaderboard
-//Diagonal targets
 
 	var $scoreDisplay = $('#score');
 	var $main = $('#main');
 	var $timeDisplay = $('#time')
 	var $targets = $('.hardTarget, .easyTarget');
 	var score = 0;
-	var time = 30;
+	var time = 5;
 	var $start = $('#start');
 	var $startGame = $('#startGame');
 	var $playAgain = $('#playAgain');
@@ -21,9 +17,7 @@ $(function(){
 	var sndThrow = new Audio("https://raw.githubusercontent.com/Leebury/Project-1-Point-and-click-game/master/sounds/Throw.wav");
 	var sndQuack = new Audio("https://raw.githubusercontent.com/Leebury/Project-1-Point-and-click-game/master/sounds/quack.wav");
 	var $highScores = $('#highScores');
-
-
-
+	var finalScore;
 
 
 	$('#finish').hide();
@@ -50,6 +44,7 @@ $(function(){
 		$(this).stop();
 		sndQuack.play();
 
+		//If statement to reset the position of the ducks on click
 		
 			if ($this.hasClass('bottomHard')) {
 
@@ -86,7 +81,7 @@ $(function(){
 					$this.show();
 			}
 
-	});
+		});
 
 	$(document).ready(function() {
     $main.on("contextmenu",function(e){
@@ -106,18 +101,32 @@ $(function(){
 	 	 	return;
 	 	}
 	 	$("#timer").html(time + " seconds");
-	 	if (time == 0){
-			$('#main').hide();
-			$('#finish').show();
-			$targets.stop();
-			endScore();
-	 	};
-	};
+	 		if (time == 0){
+				$('#main').hide();
+				$('#finish').show();
+				$targets.stop();
+				endScore();
+	 		};
+		};
 
 	function endScore(){
 
-		var finalScore=$scoreDisplay.html();
+		finalScore=$scoreDisplay.html();
 		$('#finalScore').append(finalScore);
+		leaderboard();
+		getScores();
+	}
+
+	function leaderboard(){
+
+		localStorage.setItem('leaderScore', finalScore);
+	}
+
+	function getScores(){
+		debugger
+		var getScore = localStorage.getItem('leaderScore');
+		$('ol').append(getScore);
+
 	}
 	
 	function getRandomTarget () {
